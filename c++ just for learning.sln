@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win32", "win32\win32.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "石头剪刀布", "石头剪刀布\石头剪刀布.vcxproj", "{F708515A-3764-4B9E-AC36-276B91E2D2D9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "找到第一个只出现依次的字符", "找到第一个只出现依次的字符\找到第一个只出现依次的字符.vcxproj", "{396559E9-96DD-4AD7-80D9-40A67C845C87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{F708515A-3764-4B9E-AC36-276B91E2D2D9}.Release|x64.Build.0 = Release|x64
 		{F708515A-3764-4B9E-AC36-276B91E2D2D9}.Release|x86.ActiveCfg = Release|Win32
 		{F708515A-3764-4B9E-AC36-276B91E2D2D9}.Release|x86.Build.0 = Release|Win32
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Debug|x64.ActiveCfg = Debug|x64
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Debug|x64.Build.0 = Debug|x64
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Debug|x86.ActiveCfg = Debug|Win32
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Debug|x86.Build.0 = Debug|Win32
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x64.ActiveCfg = Release|x64
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x64.Build.0 = Release|x64
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.ActiveCfg = Release|Win32
+		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
