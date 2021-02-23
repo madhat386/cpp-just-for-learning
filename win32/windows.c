@@ -111,7 +111,9 @@ int WINAPI WinMain(
 	}
 	 */
 	MSG msg;
-	while (1) {
+
+	//一直循环出处理消息，直到有事件调用了PostQuitMessage(0)方法
+	while (GetMessage(&msg, NULL, 0, 0)) {
 		/*
 			第一个参数消息结构体
 			第二个参数不过的窗口，NULL代表捕获所有窗口的消息
@@ -120,12 +122,7 @@ int WINAPI WinMain(
 
 		 */
 
-		 //如果获取到的是flase,说明窗口上点击了关闭按钮
-		if (GetMessage(&msg, NULL, 0, 0) == FALSE) {
-			break;
-		}
-
-		//翻译消息(如将组合的按键翻译成对应的消息)
+		 //翻译消息(如将组合的按键翻译成对应的消息)
 		TranslateMessage(&msg);
 
 		//分发消息
