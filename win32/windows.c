@@ -9,6 +9,8 @@ LRESULT CALLBACK WindowProc(//CALLBACK这个宏代表__stdcall,指参数传递的顺序为从右
 ) {
 	int xPos;
 	int yPos;
+	PAINTSTRUCT ps;//绘图结构体
+	HDC h;//画家
 	switch (uMsg) {
 	case WM_CLOSE://点击关闭窗口叉子事件
 		DestroyWindow(hwnd);//销毁窗口（但并未结束进程，DestroyWindow会触发另一个消息，叫做WM_DESTROY）
@@ -23,6 +25,15 @@ LRESULT CALLBACK WindowProc(//CALLBACK这个宏代表__stdcall,指参数传递的顺序为从右
 		TCHAR buf[1024];
 		wsprintf(buf, TEXT("x=%d,y=%d"), xPos, yPos);
 		MessageBox(hwnd, buf, TEXT("鼠标按下"), MB_OK);
+		break;
+	case WM_KEYDOWN://键盘按下事件
+		MessageBox(hwnd, TEXT("键盘按下"), TEXT("键盘消息"), MB_OK);
+		break;
+	case WM_PAINT://绘图消息（窗口启动自动触发）
+		//开始绘图
+		h = BeginPaint(hwnd, &ps);
+		TextOut(h, 100, 100, TEXT("helloworld"), strlen("helloworld"));//绘制文字
+		EndPaint(hwnd, &ps);//结束绘图
 		break;
 	}
 
