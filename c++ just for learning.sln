@@ -11,7 +11,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "石头剪刀布", "石头�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "找到第一个只出现依次的字符", "找到第一个只出现依次的字符\找到第一个只出现依次的字符.vcxproj", "{396559E9-96DD-4AD7-80D9-40A67C845C87}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfcc", "mfcc\mfcc.vcxproj", "{6C0C1670-0057-47B3-A854-B4902D0DD46C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCGuide", "MFCGuide\MFCGuide.vcxproj", "{3E126CA8-C763-488A-92AB-9BA6B56696AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfc", "mfc\mfcc.vcxproj", "{6C0C1670-0057-47B3-A854-B4902D0DD46C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,14 @@ Global
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x64.Build.0 = Release|x64
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.ActiveCfg = Release|Win32
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.Build.0 = Release|Win32
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Debug|x64.ActiveCfg = Debug|x64
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Debug|x64.Build.0 = Debug|x64
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Debug|x86.ActiveCfg = Debug|Win32
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Debug|x86.Build.0 = Debug|Win32
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Release|x64.ActiveCfg = Release|x64
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Release|x64.Build.0 = Release|x64
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Release|x86.ActiveCfg = Release|Win32
+		{3E126CA8-C763-488A-92AB-9BA6B56696AF}.Release|x86.Build.0 = Release|Win32
 		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x64.ActiveCfg = Debug|x64
 		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x64.Build.0 = Debug|x64
 		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x86.ActiveCfg = Debug|Win32
