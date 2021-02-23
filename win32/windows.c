@@ -7,6 +7,8 @@ LRESULT CALLBACK WindowProc(//CALLBACK这个宏代表__stdcall,指参数传递的顺序为从右
 	WPARAM wParam,//键盘附加消息
 	LPARAM lParam //鼠标附加消息
 ) {
+	int xPos;
+	int yPos;
 	switch (uMsg) {
 	case WM_CLOSE://点击关闭窗口叉子事件
 		DestroyWindow(hwnd);//销毁窗口（但并未结束进程，DestroyWindow会触发另一个消息，叫做WM_DESTROY）
@@ -15,7 +17,12 @@ LRESULT CALLBACK WindowProc(//CALLBACK这个宏代表__stdcall,指参数传递的顺序为从右
 		PostQuitMessage(0);//这个函数参数的0会传递给WinMain函数最为循环跳出的条件
 		break;
 	case WM_LBUTTONDOWN://鼠标左键按下的消息
-
+		xPos = LOWORD(lParam);
+		yPos = HIWORD(lParam);
+		//弹窗显示坐标
+		TCHAR buf[1024];
+		wsprintf(buf, TEXT("x=%d,y=%d"), xPos, yPos);
+		MessageBox(hwnd, buf, TEXT("鼠标按下"), MB_OK);
 		break;
 	}
 
