@@ -24,6 +24,7 @@
     <ProjectGuid>{d67552e2-bc8e-4466-a660-c5069a5bf19d}</ProjectGuid>
     <RootNamespace>win32</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>win32底层窗口实现</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

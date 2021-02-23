@@ -1,5 +1,30 @@
 #include <windows.h>
 
+//6.处理各种消息方法（窗口过程）
+LRESULT CALLBACK WindowProc(//CALLBACK这个宏代表__stdcall,指参数传递的顺序为从右往左，依次的入栈，并且在函数返回前会自动清空栈
+	HWND hwnd,//消息所属的窗口句柄
+	UINT uMsg,//具体消息名称
+	WPARAM wParam,//键盘附加消息
+	LPARAM lParam //鼠标附加消息
+) {
+	switch (uMsg) {
+	case WM_CLOSE://点击关闭窗口叉子事件
+		DestroyWindow(hwnd);//销毁窗口（但并未结束进程，DestroyWindow会触发另一个消息，叫做WM_DESTROY）
+		break;
+	case WM_DESTROY://窗口销毁了的消息
+		PostQuitMessage(0);//这个函数参数的0会传递给WinMain函数最为循环跳出的条件
+		break;
+	case WM_LBUTTONDOWN://鼠标左键按下的消息
+
+		break;
+	}
+
+	//默认的窗口处理函数
+	return DefWindowProc(hwnd, uMsg, wParam, lParam);
+}
+
+
+
 //WINAPI这个宏代表__stdcall,指参数传递的顺序为从右往左，依次的入栈，并且在函数返回前会自动清空栈
 int WINAPI WinMain(
 	_In_ HINSTANCE hInstance, //应用程序的实例句柄
@@ -17,7 +42,7 @@ int WINAPI WinMain(
 	windowClass.hCursor = LoadCursor(NULL, IDC_HAND);//设置光标,第一个参数为null，代表使用系统的默认光标
 	windowClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);//设置图标,第一个参数为null，代表使用系统的图标
 	windowClass.hInstance = hInstance;//当前的实例句柄,使用winmain函数中的参数即可
-	//windowClass.lpfnWndProc = WindowProc;//是指窗口过程函数，回调函数,函数自定，名字随便起
+	windowClass.lpfnWndProc = WindowProc;//是指窗口过程函数，回调函数,函数自定，名字随便起
 	windowClass.lpszClassName = TEXT("MYWINDOW");//指定窗口类名
 	windowClass.lpszMenuName = NULL;//菜单名称，没有填null
 	windowClass.style = 0;//0代表默认
@@ -87,8 +112,6 @@ int WINAPI WinMain(
 
 		//分发消息
 		DispatchMessage(&msg);
-
-		//6.处理各种消息（窗口过程）
 	}
 
 	return 0;
