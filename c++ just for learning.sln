@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{92888D5F-28D4-483D-82CF-1021F5E1134F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win32", "win32\win32.vcxproj", "{D67552E2-BC8E-4466-A660-C5069A5BF19D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win32底层窗口实现", "win32\win32.vcxproj", "{D67552E2-BC8E-4466-A660-C5069A5BF19D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "石头剪刀布", "石头剪刀布\石头剪刀布.vcxproj", "{F708515A-3764-4B9E-AC36-276B91E2D2D9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "找到第一个只出现依次的字符", "找到第一个只出现依次的字符\找到第一个只出现依次的字符.vcxproj", "{396559E9-96DD-4AD7-80D9-40A67C845C87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfcc", "mfcc\mfcc.vcxproj", "{6C0C1670-0057-47B3-A854-B4902D0DD46C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x64.Build.0 = Release|x64
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.ActiveCfg = Release|Win32
 		{396559E9-96DD-4AD7-80D9-40A67C845C87}.Release|x86.Build.0 = Release|Win32
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x64.ActiveCfg = Debug|x64
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x64.Build.0 = Debug|x64
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x86.ActiveCfg = Debug|Win32
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Debug|x86.Build.0 = Debug|Win32
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Release|x64.ActiveCfg = Release|x64
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Release|x64.Build.0 = Release|x64
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Release|x86.ActiveCfg = Release|Win32
+		{6C0C1670-0057-47B3-A854-B4902D0DD46C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
