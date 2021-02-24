@@ -55,6 +55,7 @@ CMFCStaticTextDlg::CMFCStaticTextDlg(CWnd* pParent /*=nullptr*/)
 void CMFCStaticTextDlg::DoDataExchange(CDataExchange* pDX) {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_TEXT, m_Text);
+	DDX_Control(pDX, IDC_IMAGE, m_Img);
 }
 
 BEGIN_MESSAGE_MAP(CMFCStaticTextDlg, CDialogEx)
@@ -95,7 +96,18 @@ BOOL CMFCStaticTextDlg::OnInitDialog() {
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	//显示一张图片
+	//设置静态控件窗口风格为位图居中显示
+	m_Img.ModifyStyle(0xf, SS_BITMAP | SS_CENTERIMAGE);
+	//定义一个处理图片资源的宏函数
+#define HBMP(filepath,width,height) (HBITMAP)LoadImage(AfxGetInstanceHandle(), filepath,IMAGE_BITMAP,width,height,LR_LOADFROMFILE|LR_CREATEDIBSECTION)
+	//获取静态控件的宽高
+	CRect rect;
+	m_Img.GetWindowRect(rect);
+	int width = rect.Width();
+	int height = rect.Height();
+	//设置图片
+	m_Img.SetBitmap(HBMP(TEXT("./1.bmp"), width, height));
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
