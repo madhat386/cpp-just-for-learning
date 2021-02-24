@@ -56,6 +56,7 @@ void CMFCStaticTextDlg::DoDataExchange(CDataExchange* pDX) {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_TEXT, m_Text);
 	DDX_Control(pDX, IDC_IMAGE, m_Img);
+	DDX_Control(pDX, IDC_BUTTON3, btn);
 }
 
 BEGIN_MESSAGE_MAP(CMFCStaticTextDlg, CDialogEx)
@@ -64,6 +65,7 @@ BEGIN_MESSAGE_MAP(CMFCStaticTextDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CMFCStaticTextDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CMFCStaticTextDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &CMFCStaticTextDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -168,4 +170,14 @@ void CMFCStaticTextDlg::OnBnClickedButton2() {
 	m_Text.GetWindowTextW(str);
 	MessageBox(str);
 
+}
+
+
+void CMFCStaticTextDlg::OnBnClickedButton3() {
+	CString str;
+	this->btn.GetWindowTextW(str);
+	MessageBox(str);
+	this->btn.SetWindowTextW(TEXT("\\(^o^)/~"));
+	//禁用按钮
+	this->btn.EnableWindow(FALSE);
 }
