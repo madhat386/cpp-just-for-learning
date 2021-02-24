@@ -27,22 +27,21 @@ BEGIN_MESSAGE_MAP(CMFCGuideView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_WM_LBUTTONDOWN()
+	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 // CMFCGuideView 构造/析构
 
-CMFCGuideView::CMFCGuideView() noexcept
-{
+CMFCGuideView::CMFCGuideView() noexcept {
 	// TODO: 在此处添加构造代码
 
 }
 
-CMFCGuideView::~CMFCGuideView()
-{
+CMFCGuideView::~CMFCGuideView() {
 }
 
-BOOL CMFCGuideView::PreCreateWindow(CREATESTRUCT& cs)
-{
+BOOL CMFCGuideView::PreCreateWindow(CREATESTRUCT& cs) {
 	// TODO: 在此处通过修改
 	//  CREATESTRUCT cs 来修改窗口类或样式
 
@@ -51,32 +50,29 @@ BOOL CMFCGuideView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFCGuideView 绘图
 
-void CMFCGuideView::OnDraw(CDC* /*pDC*/)
-{
+void CMFCGuideView::OnDraw(CDC* pDC) {
 	CMFCGuideDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	pDC->TextOutW(100, 100, TEXT("HELLO WORLD"));
 }
 
 
 // CMFCGuideView 打印
 
-BOOL CMFCGuideView::OnPreparePrinting(CPrintInfo* pInfo)
-{
+BOOL CMFCGuideView::OnPreparePrinting(CPrintInfo* pInfo) {
 	// 默认准备
 	return DoPreparePrinting(pInfo);
 }
 
-void CMFCGuideView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
-{
+void CMFCGuideView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/) {
 	// TODO: 添加额外的打印前进行的初始化过程
 }
 
-void CMFCGuideView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
-{
+void CMFCGuideView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/) {
 	// TODO: 添加打印后进行的清理过程
 }
 
@@ -84,13 +80,11 @@ void CMFCGuideView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 // CMFCGuideView 诊断
 
 #ifdef _DEBUG
-void CMFCGuideView::AssertValid() const
-{
+void CMFCGuideView::AssertValid() const {
 	CView::AssertValid();
 }
 
-void CMFCGuideView::Dump(CDumpContext& dc) const
-{
+void CMFCGuideView::Dump(CDumpContext& dc) const {
 	CView::Dump(dc);
 }
 
@@ -103,3 +97,22 @@ CMFCGuideDoc* CMFCGuideView::GetDocument() const // 非调试版本是内联的
 
 
 // CMFCGuideView 消息处理程序
+
+
+void CMFCGuideView::OnLButtonDown(UINT nFlags, CPoint point) {
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	CString str;
+	str.Format(TEXT("x=%d,y=%d"), point.x, point.y);
+	MessageBox(str);
+
+	CView::OnLButtonDown(nFlags, point);
+}
+
+//如果OnDraw和OnPaint同时存在，OnPaint会覆盖掉OnDraw
+void CMFCGuideView::OnPaint() {
+	CPaintDC dc(this);
+	// device context for painting
+	// TODO: 在此处添加消息处理程序代码
+	// 不为绘图消息调用 CView::OnPaint()
+	dc.TextOutW(200, 200, TEXT("HELLO SPACE"));
+}
