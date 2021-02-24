@@ -47,4 +47,23 @@ void MyFrame::OnPaint() {
 	CPaintDC dc(this);//dc相当于画家，this是绘制的所在窗口
 	dc.TextOutW(100, 100, TEXT("Hello world"));//绘制文字
 	dc.Ellipse(10, 10, 100, 100);//根据矩形（对角线的两个点）绘制内切圆
+	//MessageBox(L"aaa");//L"字符串"多字节转宽字节
+	MessageBox(TEXT("aaa")); //这个宏函数TEXT()这个宏函数会根据字符编码转换为多字节或者宽字节
+	//TCHAR字符数组;也会会根据字符编码转换为多字节或者宽字节
+
+
+	//统计宽字节字符串的长度
+	const wchar_t* str2 = L"bbbb";
+	int n = wcslen(str2);
+
+	//CString 和 char*的互相转换
+	const char* str3 = "haha";
+	CString cstr = CString(str3);
+	CString cstr2 = TEXT("hehe");
+	CStringA temp;
+	temp = cstr2;
+	char* str4 = temp.GetBuffer();
+	MessageBox(CString(str4));
+
+
 }
