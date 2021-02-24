@@ -1,14 +1,12 @@
 ﻿
-// MFCDialogDlg.cpp: 实现文件
+// MFCStaticTextDlg.cpp: 实现文件
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "MFCDialog.h"
-#include "MFCDialogDlg.h"
+#include "MFCStaticText.h"
+#include "MFCStaticTextDlg.h"
 #include "afxdialogex.h"
-#include "CDialogExec.h"
-#include "CDialogShow.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -32,8 +30,6 @@ protected:
 // 实现
 protected:
 	DECLARE_MESSAGE_MAP()
-public:
-	afx_msg void OnBnClickedButton2();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(IDD_ABOUTBOX) {
@@ -44,36 +40,35 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX) {
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
-	ON_BN_CLICKED(IDC_BUTTON2, &CAboutDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
-// CMFCDialogDlg 对话框
+// CMFCStaticTextDlg 对话框
 
 
 
-CMFCDialogDlg::CMFCDialogDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_MFCDIALOG_DIALOG, pParent) {
+CMFCStaticTextDlg::CMFCStaticTextDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_MFCSTATICTEXT_DIALOG, pParent) {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-
-void CMFCDialogDlg::DoDataExchange(CDataExchange* pDX) {
+void CMFCStaticTextDlg::DoDataExchange(CDataExchange* pDX) {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_TEXT, m_Text);
 }
 
-BEGIN_MESSAGE_MAP(CMFCDialogDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CMFCStaticTextDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDC_BUTTON1, &CMFCDialogDlg::OnBnClickedButton1)
-	ON_BN_CLICKED(IDC_BUTTON2, &CMFCDialogDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMFCStaticTextDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMFCStaticTextDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
-// CMFCDialogDlg 消息处理程序
+// CMFCStaticTextDlg 消息处理程序
 
-BOOL CMFCDialogDlg::OnInitDialog() {
+BOOL CMFCStaticTextDlg::OnInitDialog() {
 	CDialogEx::OnInitDialog();
 
 	// 将“关于...”菜单项添加到系统菜单中。
@@ -100,12 +95,11 @@ BOOL CMFCDialogDlg::OnInitDialog() {
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	dia.Create(IDD_SHOW);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CMFCDialogDlg::OnSysCommand(UINT nID, LPARAM lParam) {
+void CMFCStaticTextDlg::OnSysCommand(UINT nID, LPARAM lParam) {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX) {
 		CAboutDlg dlgAbout;
 		dlgAbout.DoModal();
@@ -119,7 +113,7 @@ void CMFCDialogDlg::OnSysCommand(UINT nID, LPARAM lParam) {
 //  来绘制该图标。  对于使用文档/视图模型的 MFC 应用程序，
 //  这将由框架自动完成。
 
-void CMFCDialogDlg::OnPaint() {
+void CMFCStaticTextDlg::OnPaint() {
 	if (IsIconic()) {
 		CPaintDC dc(this); // 用于绘制的设备上下文
 
@@ -143,31 +137,23 @@ void CMFCDialogDlg::OnPaint() {
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
 //显示。
-HCURSOR CMFCDialogDlg::OnQueryDragIcon() {
+HCURSOR CMFCStaticTextDlg::OnQueryDragIcon() {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
 
 
-void CMFCDialogDlg::OnBnClickedButton1() {
-	// 弹出模态对话框
-	CDialogExec dia;
-	//以模态的方式弹出对话框
-	dia.DoModal();
-}
-
-void CMFCDialogDlg::OnBnClickedButton2() {
-	// 弹出模态对话框
-	//以非模态的方式弹出对话框
-	dia.CenterWindow();//居中显示
-	dia.ShowWindow(SW_SHOWNORMAL);
-}
-
-
-void CAboutDlg::OnBnClickedButton2() {
-	// TODO: 在此添加控件通知处理程序代码
+void CMFCStaticTextDlg::OnBnClickedButton1() {
+	//添加设置按钮，设置文本呵呵
+	m_Text.SetWindowTextW(TEXT("呵呵"));
 
 }
 
 
+void CMFCStaticTextDlg::OnBnClickedButton2() {
+	// 获取m_Text控件中的文本
+	CString str;
+	m_Text.GetWindowTextW(str);
+	MessageBox(str);
 
+}

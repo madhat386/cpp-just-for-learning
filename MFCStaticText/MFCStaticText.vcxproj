@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{D0937288-53FF-4560-96D6-DD40D8236F16}</ProjectGuid>
+    <ProjectGuid>{446925E3-686F-451F-9D67-6BEB0F307B8A}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>MFCDialog</RootNamespace>
+    <RootNamespace>MFCStaticText</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -183,20 +183,16 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CDialogExec.h" />
-    <ClInclude Include="CDialogShow.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="MFCDialog.h" />
-    <ClInclude Include="MFCDialogDlg.h" />
+    <ClInclude Include="MFCStaticText.h" />
+    <ClInclude Include="MFCStaticTextDlg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CDialogExec.cpp" />
-    <ClCompile Include="CDialogShow.cpp" />
-    <ClCompile Include="MFCDialog.cpp" />
-    <ClCompile Include="MFCDialogDlg.cpp" />
+    <ClCompile Include="MFCStaticText.cpp" />
+    <ClCompile Include="MFCStaticTextDlg.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -205,13 +201,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFCDialog.rc" />
+    <ResourceCompile Include="MFCStaticText.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MFCDialog.rc2" />
+    <None Include="res\MFCStaticText.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\MFCDialog.ico" />
+    <Image Include="res\MFCStaticText.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

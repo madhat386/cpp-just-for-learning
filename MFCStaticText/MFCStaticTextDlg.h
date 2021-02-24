@@ -1,19 +1,19 @@
 ﻿
-// MFCDialogDlg.h: 头文件
+// MFCStaticTextDlg.h: 头文件
 //
 
 #pragma once
-#include "CDialogShow.h"
 
-// CMFCDialogDlg 对话框
-class CMFCDialogDlg : public CDialogEx {
+
+// CMFCStaticTextDlg 对话框
+class CMFCStaticTextDlg : public CDialogEx {
 	// 构造
 public:
-	CMFCDialogDlg(CWnd* pParent = nullptr);	// 标准构造函数
+	CMFCStaticTextDlg(CWnd* pParent = nullptr);	// 标准构造函数
 
-	// 对话框数据
+// 对话框数据
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_MFCDIALOG_DIALOG };
+	enum { IDD = IDD_MFCSTATICTEXT_DIALOG };
 #endif
 
 protected:
@@ -30,9 +30,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+private:
+	CStatic m_Text;
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
-	CDialogShow dia;
-
 };

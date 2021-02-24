@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFCDialog.h">
+    <ClInclude Include="MFCStaticText.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MFCDialogDlg.h">
+    <ClInclude Include="MFCStaticTextDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -33,42 +33,30 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CDialogExec.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CDialogShow.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MFCDialog.cpp">
+    <ClCompile Include="MFCStaticText.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MFCDialogDlg.cpp">
+    <ClCompile Include="MFCStaticTextDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CDialogExec.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CDialogShow.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFCDialog.rc">
+    <ResourceCompile Include="MFCStaticText.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MFCDialog.rc2">
+    <None Include="res\MFCStaticText.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\MFCDialog.ico">
+    <Image Include="res\MFCStaticText.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
