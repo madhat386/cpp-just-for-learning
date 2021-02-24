@@ -7,6 +7,7 @@
 #include "MFCDialog.h"
 #include "MFCDialogDlg.h"
 #include "afxdialogex.h"
+#include "CDialogExec.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -146,8 +147,9 @@ HCURSOR CMFCDialogDlg::OnQueryDragIcon() {
 
 void CMFCDialogDlg::OnBnClickedButton1() {
 	// 弹出模态对话框
-
-
+	CDialogExec dia;
+	//以模态的方式弹出对话框
+	dia.DoModal();
 
 }
 
