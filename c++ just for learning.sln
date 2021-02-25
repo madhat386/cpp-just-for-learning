@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{92888D5F-28D4-483D-82CF-1021F5E1134F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win32底层窗口实现", "win32\win32.vcxproj", "{D67552E2-BC8E-4466-A660-C5069A5BF19D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "石头剪刀布", "石头剪刀布\石头剪刀布.vcxproj", "{F708515A-3764-4B9E-AC36-276B91E2D2D9}"
@@ -25,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCComboxCtrl", "MFCComboxC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCCListCtrl", "MFCCListCtrl\MFCCListCtrl.vcxproj", "{DBE1519E-B326-4F73-B551-EE122D1D66D2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTreeCtrl", "MFCTreeCtrl\MFCTreeCtrl.vcxproj", "{C807FDB9-97C6-4570-8299-56FA38383FE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,14 +33,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Debug|x64.ActiveCfg = Debug|x64
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Debug|x64.Build.0 = Debug|x64
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Debug|x86.ActiveCfg = Debug|Win32
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Debug|x86.Build.0 = Debug|Win32
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Release|x64.ActiveCfg = Release|x64
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Release|x64.Build.0 = Release|x64
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Release|x86.ActiveCfg = Release|Win32
-		{92888D5F-28D4-483D-82CF-1021F5E1134F}.Release|x86.Build.0 = Release|Win32
 		{D67552E2-BC8E-4466-A660-C5069A5BF19D}.Debug|x64.ActiveCfg = Debug|x64
 		{D67552E2-BC8E-4466-A660-C5069A5BF19D}.Debug|x64.Build.0 = Debug|x64
 		{D67552E2-BC8E-4466-A660-C5069A5BF19D}.Debug|x86.ActiveCfg = Debug|Win32
@@ -121,6 +113,14 @@ Global
 		{DBE1519E-B326-4F73-B551-EE122D1D66D2}.Release|x64.Build.0 = Release|x64
 		{DBE1519E-B326-4F73-B551-EE122D1D66D2}.Release|x86.ActiveCfg = Release|Win32
 		{DBE1519E-B326-4F73-B551-EE122D1D66D2}.Release|x86.Build.0 = Release|Win32
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Debug|x64.ActiveCfg = Debug|x64
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Debug|x64.Build.0 = Debug|x64
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Debug|x86.ActiveCfg = Debug|Win32
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Debug|x86.Build.0 = Debug|Win32
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Release|x64.ActiveCfg = Release|x64
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Release|x64.Build.0 = Release|x64
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Release|x86.ActiveCfg = Release|Win32
+		{C807FDB9-97C6-4570-8299-56FA38383FE9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
