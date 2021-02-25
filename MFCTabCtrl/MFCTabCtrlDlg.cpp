@@ -61,6 +61,7 @@ BEGIN_MESSAGE_MAP(CMFCTabCtrlDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, &CMFCTabCtrlDlg::OnTcnSelchangeTab1)
 END_MESSAGE_MAP()
 
 
@@ -93,11 +94,11 @@ BOOL CMFCTabCtrlDlg::OnInitDialog() {
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
-
-
-
-
+	//将dlg1和dlg2两个对话框对象，加载到TabCtrl控件上
+	m_tab.AddPage(TEXT("系统消息"), &this->dlg1, IDD_DIALOG1);
+	m_tab.AddPage(TEXT("系统消息"), &this->dlg2, IDD_DIALOG2);
+	//显示
+	m_tab.Show();
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -144,3 +145,9 @@ HCURSOR CMFCTabCtrlDlg::OnQueryDragIcon() {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMFCTabCtrlDlg::OnTcnSelchangeTab1(NMHDR* pNMHDR, LRESULT* pResult) {
+	// TODO: 在此添加控件通知处理程序代码
+	*pResult = 0;
+}

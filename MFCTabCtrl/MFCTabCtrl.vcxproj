@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{D0019CE2-D9E0-47D2-AA69-472CBD550F16}</ProjectGuid>
+    <ProjectGuid>{DBD7BD35-7185-4352-935D-B992B9CE754C}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>MFCTabCtrl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -183,14 +183,19 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CDlg1.h" />
+    <ClInclude Include="CDlg2.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MFCTabCtrl.h" />
     <ClInclude Include="MFCTabCtrlDlg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="TabSheet.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CDlg1.cpp" />
+    <ClCompile Include="CDlg2.cpp" />
     <ClCompile Include="MFCTabCtrl.cpp" />
     <ClCompile Include="MFCTabCtrlDlg.cpp" />
     <ClCompile Include="pch.cpp">
@@ -199,6 +204,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TabSheet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCTabCtrl.rc" />

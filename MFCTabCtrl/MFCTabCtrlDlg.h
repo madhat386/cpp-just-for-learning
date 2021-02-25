@@ -3,12 +3,14 @@
 //
 
 #pragma once
+#include "TabSheet.h"
+#include "CDlg1.h"
+#include "CDlg2.h"
 
 
 // CMFCTabCtrlDlg 对话框
-class CMFCTabCtrlDlg : public CDialogEx
-{
-// 构造
+class CMFCTabCtrlDlg : public CDialogEx {
+	// 构造
 public:
 	CMFCTabCtrlDlg(CWnd* pParent = nullptr);	// 标准构造函数
 
@@ -17,7 +19,7 @@ public:
 	enum { IDD = IDD_MFCTABCTRL_DIALOG };
 #endif
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
 
@@ -32,5 +34,9 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 private:
-	CTabCtrl m_tab;
+	CTabSheet m_tab;
+	CDialog dlg1;
+	CDialog dlg2;
+public:
+	afx_msg void OnTcnSelchangeTab1(NMHDR* pNMHDR, LRESULT* pResult);
 };
