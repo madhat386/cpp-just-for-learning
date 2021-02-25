@@ -28,23 +28,22 @@ END_MESSAGE_MAP()
 
 // CSaleSystemDoc 构造/析构
 
-CSaleSystemDoc::CSaleSystemDoc() noexcept
-{
+CSaleSystemDoc::CSaleSystemDoc() noexcept {
 	// TODO: 在此添加一次性构造代码
 
 }
 
-CSaleSystemDoc::~CSaleSystemDoc()
-{
+CSaleSystemDoc::~CSaleSystemDoc() {
 }
 
-BOOL CSaleSystemDoc::OnNewDocument()
-{
+BOOL CSaleSystemDoc::OnNewDocument() {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
 
 	// TODO: 在此添加重新初始化代码
 	// (SDI 文档将重用该文档)
+	//修改项目标题（左侧）
+	SetTitle(TEXT("销售管理系统"));
 
 	return TRUE;
 }
@@ -54,14 +53,11 @@ BOOL CSaleSystemDoc::OnNewDocument()
 
 // CSaleSystemDoc 序列化
 
-void CSaleSystemDoc::Serialize(CArchive& ar)
-{
-	if (ar.IsStoring())
-	{
+void CSaleSystemDoc::Serialize(CArchive& ar) {
+	if (ar.IsStoring()) {
 		// TODO: 在此添加存储代码
 	}
-	else
-	{
+	else {
 		// TODO: 在此添加加载代码
 	}
 }
@@ -69,15 +65,14 @@ void CSaleSystemDoc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // 缩略图的支持
-void CSaleSystemDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
-{
+void CSaleSystemDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds) {
 	// 修改此代码以绘制文档数据
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
 
 	CString strText = _T("TODO: implement thumbnail drawing here");
 	LOGFONT lf;
 
-	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT) GetStockObject(DEFAULT_GUI_FONT));
+	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT)GetStockObject(DEFAULT_GUI_FONT));
 	pDefaultGUIFont->GetLogFont(&lf);
 	lf.lfHeight = 36;
 
@@ -90,8 +85,7 @@ void CSaleSystemDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 搜索处理程序的支持
-void CSaleSystemDoc::InitializeSearchContent()
-{
+void CSaleSystemDoc::InitializeSearchContent() {
 	CString strSearchContent;
 	// 从文档数据设置搜索内容。
 	// 内容部分应由“;”分隔
@@ -100,18 +94,14 @@ void CSaleSystemDoc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CSaleSystemDoc::SetSearchContent(const CString& value)
-{
-	if (value.IsEmpty())
-	{
+void CSaleSystemDoc::SetSearchContent(const CString& value) {
+	if (value.IsEmpty()) {
 		RemoveChunk(PKEY_Search_Contents.fmtid, PKEY_Search_Contents.pid);
 	}
-	else
-	{
-		CMFCFilterChunkValueImpl *pChunk = nullptr;
+	else {
+		CMFCFilterChunkValueImpl* pChunk = nullptr;
 		ATLTRY(pChunk = new CMFCFilterChunkValueImpl);
-		if (pChunk != nullptr)
-		{
+		if (pChunk != nullptr) {
 			pChunk->SetTextValue(PKEY_Search_Contents, value, CHUNK_TEXT);
 			SetChunkValue(pChunk);
 		}
@@ -123,13 +113,11 @@ void CSaleSystemDoc::SetSearchContent(const CString& value)
 // CSaleSystemDoc 诊断
 
 #ifdef _DEBUG
-void CSaleSystemDoc::AssertValid() const
-{
+void CSaleSystemDoc::AssertValid() const {
 	CDocument::AssertValid();
 }
 
-void CSaleSystemDoc::Dump(CDumpContext& dc) const
-{
+void CSaleSystemDoc::Dump(CDumpContext& dc) const {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG

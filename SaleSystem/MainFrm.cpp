@@ -51,6 +51,10 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct) {
 	SetClassLong(m_hWnd, GCL_HICON, (LONG)AfxGetApp()->LoadIconW(IDI_ICON_WIN));
 	//修改项目标题（右侧）
 	SetTitle(TEXT("v0.0.1alpha"));
+	//修改窗口的大小
+	MoveWindow(0, 0, 800, 500);
+	//居中显示
+	CenterWindow();
 
 
 	return 0;
