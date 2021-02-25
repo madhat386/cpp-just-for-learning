@@ -54,12 +54,14 @@ CMFCComboxCtrlDlg::CMFCComboxCtrlDlg(CWnd* pParent /*=nullptr*/)
 
 void CMFCComboxCtrlDlg::DoDataExchange(CDataExchange* pDX) {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBO1, m_Combox);
 }
 
 BEGIN_MESSAGE_MAP(CMFCComboxCtrlDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_CBN_SELCHANGE(IDC_COMBO1, &CMFCComboxCtrlDlg::OnCbnSelchangeCombo1)
 END_MESSAGE_MAP()
 
 
@@ -92,6 +94,17 @@ BOOL CMFCComboxCtrlDlg::OnInitDialog() {
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
+	m_Combox.AddString(TEXT("唐僧"));
+	m_Combox.AddString(TEXT("孙悟空"));
+	m_Combox.AddString(TEXT("猪八戒"));
+	m_Combox.AddString(TEXT("贝吉塔"));
+	//设置默认选中值
+	m_Combox.SetCurSel(0);
+	m_Combox.DeleteString(3);
+	m_Combox.InsertString(2, TEXT("白龙马"));
+	CString str;
+	m_Combox.GetLBText(0, str);
+
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -144,4 +157,13 @@ void CMFCComboxCtrlDlg::OnOK() {
 	// TODO: 在此添加专用代码和/或调用基类
 
 	//CDialogEx::OnOK();
+}
+
+
+void CMFCComboxCtrlDlg::OnCbnSelchangeCombo1() {
+	// TODO: 在此添加控件通知处理程序代码
+	CString str;
+	int index = m_Combox.GetCurSel();
+	m_Combox.GetLBText(index, str);
+	MessageBoxW(str);
 }

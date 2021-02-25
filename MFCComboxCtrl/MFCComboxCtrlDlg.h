@@ -31,4 +31,8 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 	virtual void OnOK();
+private:
+	CComboBox m_Combox;
+public:
+	afx_msg void OnCbnSelchangeCombo1();
 };
