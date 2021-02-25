@@ -6,9 +6,8 @@
 
 
 // CMFCCListCtrlDlg 对话框
-class CMFCCListCtrlDlg : public CDialogEx
-{
-// 构造
+class CMFCCListCtrlDlg : public CDialogEx {
+	// 构造
 public:
 	CMFCCListCtrlDlg(CWnd* pParent = nullptr);	// 标准构造函数
 
@@ -17,7 +16,7 @@ public:
 	enum { IDD = IDD_MFCCLISTCTRL_DIALOG };
 #endif
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
 
@@ -31,4 +30,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+private:
+	CListCtrl m_ListCtrl;
 };
