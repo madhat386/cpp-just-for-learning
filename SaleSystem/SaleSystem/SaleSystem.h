@@ -1,31 +1,31 @@
-ï»¿
-// SaleSystem.h: SaleSystem åº”ç”¨ç¨‹åºçš„ä¸»å¤´æ–‡ä»¶
+
+// SaleSystem.h : SaleSystem Ó¦ÓÃ³ÌĞòµÄÖ÷Í·ÎÄ¼ş
 //
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "åœ¨åŒ…å«æ­¤æ–‡ä»¶ä¹‹å‰åŒ…å« 'pch.h' ä»¥ç”Ÿæˆ PCH"
+	#error "ÔÚ°üº¬´ËÎÄ¼şÖ®Ç°°üº¬¡°stdafx.h¡±ÒÔÉú³É PCH ÎÄ¼ş"
 #endif
 
-#include "resource.h"       // ä¸»ç¬¦å·
+#include "resource.h"       // Ö÷·ûºÅ
 
 
 // CSaleSystemApp:
-// æœ‰å…³æ­¤ç±»çš„å®ç°ï¼Œè¯·å‚é˜… SaleSystem.cpp
+// ÓĞ¹Ø´ËÀàµÄÊµÏÖ£¬Çë²ÎÔÄ SaleSystem.cpp
 //
 
 class CSaleSystemApp : public CWinApp
 {
 public:
-	CSaleSystemApp() noexcept;
+	CSaleSystemApp();
 
 
-// é‡å†™
+// ÖØĞ´
 public:
 	virtual BOOL InitInstance();
 	virtual int ExitInstance();
 
-// å®ç°
+// ÊµÏÖ
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 };

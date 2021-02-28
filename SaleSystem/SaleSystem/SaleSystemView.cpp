@@ -1,11 +1,10 @@
-ï»¿
-// SaleSystemView.cpp: CSaleSystemView ç±»çš„å®ç°
+
+// SaleSystemView.cpp : CSaleSystemView ÀàµÄÊµÏÖ
 //
 
-#include "pch.h"
-#include "framework.h"
-// SHARED_HANDLERS å¯ä»¥åœ¨å®ç°é¢„è§ˆã€ç¼©ç•¥å›¾å’Œæœç´¢ç­›é€‰å™¨å¥æŸ„çš„
-// ATL é¡¹ç›®ä¸­è¿›è¡Œå®šä¹‰ï¼Œå¹¶å…è®¸ä¸è¯¥é¡¹ç›®å…±äº«æ–‡æ¡£ä»£ç ã€‚
+#include "stdafx.h"
+// SHARED_HANDLERS ¿ÉÒÔÔÚÊµÏÖÔ¤ÀÀ¡¢ËõÂÔÍ¼ºÍËÑË÷É¸Ñ¡Æ÷¾ä±úµÄ
+// ATL ÏîÄ¿ÖĞ½øĞĞ¶¨Òå£¬²¢ÔÊĞíÓë¸ÃÏîÄ¿¹²ÏíÎÄµµ´úÂë¡£
 #ifndef SHARED_HANDLERS
 #include "SaleSystem.h"
 #endif
@@ -23,17 +22,17 @@
 IMPLEMENT_DYNCREATE(CSaleSystemView, CView)
 
 BEGIN_MESSAGE_MAP(CSaleSystemView, CView)
-	// æ ‡å‡†æ‰“å°å‘½ä»¤
+	// ±ê×¼´òÓ¡ÃüÁî
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
-// CSaleSystemView æ„é€ /ææ„
+// CSaleSystemView ¹¹Ôì/Îö¹¹
 
-CSaleSystemView::CSaleSystemView() noexcept
+CSaleSystemView::CSaleSystemView()
 {
-	// TODO: åœ¨æ­¤å¤„æ·»åŠ æ„é€ ä»£ç 
+	// TODO:  ÔÚ´Ë´¦Ìí¼Ó¹¹Ôì´úÂë
 
 }
 
@@ -43,13 +42,13 @@ CSaleSystemView::~CSaleSystemView()
 
 BOOL CSaleSystemView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: åœ¨æ­¤å¤„é€šè¿‡ä¿®æ”¹
-	//  CREATESTRUCT cs æ¥ä¿®æ”¹çª—å£ç±»æˆ–æ ·å¼
+	// TODO:  ÔÚ´Ë´¦Í¨¹ıĞŞ¸Ä
+	//  CREATESTRUCT cs À´ĞŞ¸Ä´°¿ÚÀà»òÑùÊ½
 
 	return CView::PreCreateWindow(cs);
 }
 
-// CSaleSystemView ç»˜å›¾
+// CSaleSystemView »æÖÆ
 
 void CSaleSystemView::OnDraw(CDC* /*pDC*/)
 {
@@ -58,30 +57,30 @@ void CSaleSystemView::OnDraw(CDC* /*pDC*/)
 	if (!pDoc)
 		return;
 
-	// TODO: åœ¨æ­¤å¤„ä¸ºæœ¬æœºæ•°æ®æ·»åŠ ç»˜åˆ¶ä»£ç 
+	// TODO:  ÔÚ´Ë´¦Îª±¾»úÊı¾İÌí¼Ó»æÖÆ´úÂë
 }
 
 
-// CSaleSystemView æ‰“å°
+// CSaleSystemView ´òÓ¡
 
 BOOL CSaleSystemView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// é»˜è®¤å‡†å¤‡
+	// Ä¬ÈÏ×¼±¸
 	return DoPreparePrinting(pInfo);
 }
 
 void CSaleSystemView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: æ·»åŠ é¢å¤–çš„æ‰“å°å‰è¿›è¡Œçš„åˆå§‹åŒ–è¿‡ç¨‹
+	// TODO:  Ìí¼Ó¶îÍâµÄ´òÓ¡Ç°½øĞĞµÄ³õÊ¼»¯¹ı³Ì
 }
 
 void CSaleSystemView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: æ·»åŠ æ‰“å°åè¿›è¡Œçš„æ¸…ç†è¿‡ç¨‹
+	// TODO:  Ìí¼Ó´òÓ¡ºó½øĞĞµÄÇåÀí¹ı³Ì
 }
 
 
-// CSaleSystemView è¯Šæ–­
+// CSaleSystemView Õï¶Ï
 
 #ifdef _DEBUG
 void CSaleSystemView::AssertValid() const
@@ -94,7 +93,7 @@ void CSaleSystemView::Dump(CDumpContext& dc) const
 	CView::Dump(dc);
 }
 
-CSaleSystemDoc* CSaleSystemView::GetDocument() const // éè°ƒè¯•ç‰ˆæœ¬æ˜¯å†…è”çš„
+CSaleSystemDoc* CSaleSystemView::GetDocument() const // ·Çµ÷ÊÔ°æ±¾ÊÇÄÚÁªµÄ
 {
 	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CSaleSystemDoc)));
 	return (CSaleSystemDoc*)m_pDocument;
@@ -102,4 +101,4 @@ CSaleSystemDoc* CSaleSystemView::GetDocument() const // éè°ƒè¯•ç‰ˆæœ¬æ˜¯å†…è”
 #endif //_DEBUG
 
 
-// CSaleSystemView æ¶ˆæ¯å¤„ç†ç¨‹åº
+// CSaleSystemView ÏûÏ¢´¦Àí³ÌĞò

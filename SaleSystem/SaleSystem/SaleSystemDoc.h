@@ -1,5 +1,5 @@
-ï»¿
-// SaleSystemDoc.h: CSaleSystemDoc ç±»çš„æ¥å£
+
+// SaleSystemDoc.h : CSaleSystemDoc ÀàµÄ½Ó¿Ú
 //
 
 
@@ -8,17 +8,17 @@
 
 class CSaleSystemDoc : public CDocument
 {
-protected: // ä»…ä»åºåˆ—åŒ–åˆ›å»º
-	CSaleSystemDoc() noexcept;
+protected: // ½ö´ÓĞòÁĞ»¯´´½¨
+	CSaleSystemDoc();
 	DECLARE_DYNCREATE(CSaleSystemDoc)
 
-// ç‰¹æ€§
+// ÌØĞÔ
 public:
 
-// æ“ä½œ
+// ²Ù×÷
 public:
 
-// é‡å†™
+// ÖØĞ´
 public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
@@ -27,7 +27,7 @@ public:
 	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
 #endif // SHARED_HANDLERS
 
-// å®ç°
+// ÊµÏÖ
 public:
 	virtual ~CSaleSystemDoc();
 #ifdef _DEBUG
@@ -37,12 +37,12 @@ public:
 
 protected:
 
-// ç”Ÿæˆçš„æ¶ˆæ¯æ˜ å°„å‡½æ•°
+// Éú³ÉµÄÏûÏ¢Ó³Éäº¯Êı
 protected:
 	DECLARE_MESSAGE_MAP()
 
 #ifdef SHARED_HANDLERS
-	// ç”¨äºä¸ºæœç´¢å¤„ç†ç¨‹åºè®¾ç½®æœç´¢å†…å®¹çš„ Helper å‡½æ•°
+	// ÓÃÓÚÎªËÑË÷´¦Àí³ÌĞòÉèÖÃËÑË÷ÄÚÈİµÄ Helper º¯Êı
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
 };

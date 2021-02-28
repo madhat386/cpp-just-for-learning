@@ -1,5 +1,5 @@
-ï»¿
-// SaleSystemView.h: CSaleSystemView ç±»çš„æ¥å£
+
+// SaleSystemView.h : CSaleSystemView ÀàµÄ½Ó¿Ú
 //
 
 #pragma once
@@ -7,27 +7,27 @@
 
 class CSaleSystemView : public CView
 {
-protected: // ä»…ä»åºåˆ—åŒ–åˆ›å»º
-	CSaleSystemView() noexcept;
+protected: // ½ö´ÓĞòÁĞ»¯´´½¨
+	CSaleSystemView();
 	DECLARE_DYNCREATE(CSaleSystemView)
 
-// ç‰¹æ€§
+// ÌØĞÔ
 public:
 	CSaleSystemDoc* GetDocument() const;
 
-// æ“ä½œ
+// ²Ù×÷
 public:
 
-// é‡å†™
+// ÖØĞ´
 public:
-	virtual void OnDraw(CDC* pDC);  // é‡å†™ä»¥ç»˜åˆ¶è¯¥è§†å›¾
+	virtual void OnDraw(CDC* pDC);  // ÖØĞ´ÒÔ»æÖÆ¸ÃÊÓÍ¼
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 protected:
 	virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
 
-// å®ç°
+// ÊµÏÖ
 public:
 	virtual ~CSaleSystemView();
 #ifdef _DEBUG
@@ -37,12 +37,12 @@ public:
 
 protected:
 
-// ç”Ÿæˆçš„æ¶ˆæ¯æ˜ å°„å‡½æ•°
+// Éú³ÉµÄÏûÏ¢Ó³Éäº¯Êı
 protected:
 	DECLARE_MESSAGE_MAP()
 };
 
-#ifndef _DEBUG  // SaleSystemView.cpp ä¸­çš„è°ƒè¯•ç‰ˆæœ¬
+#ifndef _DEBUG  // SaleSystemView.cpp ÖĞµÄµ÷ÊÔ°æ±¾
 inline CSaleSystemDoc* CSaleSystemView::GetDocument() const
    { return reinterpret_cast<CSaleSystemDoc*>(m_pDocument); }
 #endif

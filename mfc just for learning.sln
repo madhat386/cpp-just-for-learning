@@ -23,7 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTreeCtrl", "MFCTreeCtrl\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTabCtrl", "MFCTabCtrl\MFCTabCtrl.vcxproj", "{DBD7BD35-7185-4352-935D-B992B9CE754C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaleSystem", "SaleSystem\SaleSystem.vcxproj", "{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaleSystem", "SaleSystem\SaleSystem\SaleSystem.vcxproj", "{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,14 +113,12 @@ Global
 		{DBD7BD35-7185-4352-935D-B992B9CE754C}.Release|x64.Build.0 = Release|x64
 		{DBD7BD35-7185-4352-935D-B992B9CE754C}.Release|x86.ActiveCfg = Release|Win32
 		{DBD7BD35-7185-4352-935D-B992B9CE754C}.Release|x86.Build.0 = Release|Win32
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Debug|x64.ActiveCfg = Debug|x64
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Debug|x64.Build.0 = Debug|x64
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Debug|x86.ActiveCfg = Debug|Win32
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Debug|x86.Build.0 = Debug|Win32
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Release|x64.ActiveCfg = Release|x64
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Release|x64.Build.0 = Release|x64
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Release|x86.ActiveCfg = Release|Win32
-		{0DB7D5B1-65B7-4D42-BA65-060A3860AEC7}.Release|x86.Build.0 = Release|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Debug|x64.ActiveCfg = Debug|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Debug|x86.ActiveCfg = Debug|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Debug|x86.Build.0 = Debug|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Release|x64.ActiveCfg = Release|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Release|x86.ActiveCfg = Release|Win32
+		{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
