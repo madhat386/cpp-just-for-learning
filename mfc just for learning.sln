@@ -23,7 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTreeCtrl", "MFCTreeCtrl\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTabCtrl", "MFCTabCtrl\MFCTabCtrl.vcxproj", "{DBD7BD35-7185-4352-935D-B992B9CE754C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaleSystem", "SaleSystem\SaleSystem\SaleSystem.vcxproj", "{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaleSystem", "SaleSystem\SaleSystem.vcxproj", "{0326F0DC-B428-4E88-9FAC-4C39A0DB60D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
