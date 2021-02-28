@@ -48,7 +48,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct) {
 	m_wndStatusBar.SetIndicators(indicators, sizeof(indicators) / sizeof(UINT));
 
 	//修改项目图标
-	SetClassLong(m_hWnd, GCL_HICON, (LONG)AfxGetApp()->LoadIconW(IDI_ICON_WIN));
+	SetClassLong(m_hWnd, GCLP_HICON, (LONG)AfxGetApp()->LoadIconW(IDI_ICON_WIN));
 	//修改项目标题（右侧）
 	SetTitle(TEXT("v0.0.1alpha"));
 	//修改窗口的大小
